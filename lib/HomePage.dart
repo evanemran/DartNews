@@ -237,11 +237,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.red,
               ),
-              child: Text('Dart News'),
+              child: Column(children: [
+                Card(color: Colors.white, child: Icon(Icons.newspaper, size: 50,),),
+                Text("Dart News", style: AppTheme.countryPickerText,)
+              ],),
             ),
             Card(elevation: 8, color: Colors.white, margin: EdgeInsets.all(8), child: Row(children: [SizedBox(width: 8), Icon(Icons.newspaper), Expanded(child: ListTile(
               title: const Text('All News'),
@@ -262,7 +265,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ))],),),
             Card(elevation: 8, color: Colors.white, margin: EdgeInsets.all(8), child: Row(children: [SizedBox(width: 8), Icon(Icons.flag), Expanded(child: ListTile(
-              title: const Text('All Sources'),
+              title: const Text('All Countries'),
               onTap: () {
                 // Update the state of the app
                 // ...
