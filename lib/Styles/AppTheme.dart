@@ -14,4 +14,13 @@ class AppTheme{
 
   static final TextStyle countryPickerText =
   TextStyle(fontSize: 18.0,fontWeight:FontWeight.normal, color: Colors.white,fontFamily: "Roboto");
+
+  static final TextStyle authorText =
+  TextStyle(fontSize: 16.0,fontWeight:FontWeight.bold, color: Colors.blueAccent,fontFamily: "Roboto");
+
+  static final TextStyle contentText =
+  TextStyle(fontSize: 16.0,fontWeight:FontWeight.bold, color: Colors.black,fontFamily: "Roboto");
+
+  static final TextStyle bodyText =
+  TextStyle(fontSize: 16.0,fontWeight:FontWeight.normal, color: Colors.black,fontFamily: "Roboto");
 }

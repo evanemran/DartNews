@@ -1,3 +1,4 @@
+import 'package:dart_news/ArticlePage.dart';
 import 'package:dart_news/Models/HeadlinesResponse.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
@@ -78,7 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
       itemBuilder: (context, index) {
         return InkWell(
           onTap: () {
-
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ArticlePage(article: list![index],)),
+            );
           },
           child: Card(
             color: Colors.white,
